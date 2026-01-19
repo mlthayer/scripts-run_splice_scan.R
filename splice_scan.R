@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Spn42Dd WT vs MUT splice-motif scan (GT/AG) with simple heuristic scores
+# WT vs MUT splice-motif scan (GT/AG) with simple heuristic scores
 # Reproducible script: reads WT and MUT sequences, sanitizes, finds first diff,
 # scans +/- window for donor/acceptor motifs, scores, builds comparison table,
 # prints summary, and writes CSV output.
@@ -35,7 +35,7 @@ Flags:
   --wt      WT sequence string (DNA)
   --mut     MUT sequence string (DNA)
   --radius  Window radius around first difference (default: 200)
-  --out     Output CSV path (default: outputs/Spn42Dd_splice_sites_pm200_WT_vs_MUT_simpleScores.csv)
+  --out     Output CSV path (default: outputs/xxxxx_splice_sites_pm200_WT_vs_MUT_simpleScores.csv)
 
 Example:
   Rscript scripts/run_splice_scan.R --wt \"ACGT...\" --mut \"ACGT...\" --radius 200 --out outputs/out.csv
@@ -51,7 +51,7 @@ wt_seq  <- get_arg("--wt", wt_seq_default)
 mut_seq <- get_arg("--mut", mut_seq_default)
 window_radius <- as.integer(get_arg("--radius", "200"))
 
-out_default <- sprintf("outputs/Spn42Dd_splice_sites_pm%d_WT_vs_MUT_simpleScores.csv", window_radius)
+out_default <- sprintf("outputs/xxxxx_splice_sites_pm%d_WT_vs_MUT_simpleScores.csv", window_radius)
 out_file <- get_arg("--out", out_default)
 
 if (wt_seq == "PASTE_WT_SEQUENCE_HERE" || mut_seq == "PASTE_MUT_SEQUENCE_HERE") {
