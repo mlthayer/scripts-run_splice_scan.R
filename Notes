@@ -1,0 +1,5 @@
+The splice-site “strength” scores are simple heuristics:
+
+Donor: number of matches to consensus 9-mer CAGGTAAGT (0–9)
+
+Acceptor: pyrimidine richness (C/T) in positions 1–20 of the 23-mer + a small AG bonus
