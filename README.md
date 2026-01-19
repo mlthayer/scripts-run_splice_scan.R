@@ -14,3 +14,8 @@ From the repository root:
 
 ```bash
 Rscript scripts/run_splice_scan.R --wt "ACGT..." --mut "ACGT..." --radius 200 --out outputs/results.csv
+
+## Code availability
+
+The analysis pipeline is archived on Zenodo:
+mlthayer. (2026). mlthayer/scripts-run_splice_scan.R: WT vs MUT splice motif scan (v0.1.0) (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.18295243
